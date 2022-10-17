@@ -1,0 +1,174 @@
+//Quienes somos
+#quienes-somos{
+    p{
+        text-align: justify;
+    }
+    article{
+        padding: 1.5rem 0;
+    }
+    img{
+        max-width: 95%;
+        //efecto imagen traslucida para resoluciones a partir de md
+        filter: opacity(0.7) drop-shadow(0 0 0 map-get($colores,secundario20)); 
+    }
+
+    //md
+    @media (min-width: 768px) {
+        article{
+            padding: 0 1.5rem;
+        }
+        img{
+            height: 60vh;
+            object-fit: cover;
+        }
+        p{
+            width: 35vw;
+        }
+    }
+
+}
+
+//Alquiler de mobiliario
+#alquiler-mobiliario{
+    .row>*{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav{
+        background-color: map-get($colores,principal10);
+        .nav-pills, .nav-link {
+            text-align: left;
+            color: map-get($colores,negro);
+            background-color: map-get($colores,transparente);              
+        }
+
+        .nav-pills{
+            border: none;
+        }
+
+        .nav-pills .nav-link.active{
+            color: map-get($colores,negro);
+            background-color: map-get($colores,transparente);
+        }
+
+        a:hover{
+            font-weight: $weight700;
+        } 
+    }
+
+    h2{
+        color: map-get($colores,principal80);
+        border-bottom: 1px solid map-get($colores,principal);
+        padding: 0.5rem 0;
+    }
+
+    h5,p,li{
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    div.card{
+        width: 34rem;
+        max-width: 100vw;
+        margin-bottom: 1.5rem;
+        background-color: map-get($colores,secundario20);
+        li{
+            background-color: map-get($colores,transparente);
+        }
+        .list-group{
+            --bs-list-group-item-padding-x: 0.5rem;
+            --bs-list-group-item-padding-y: 0.25rem;
+        }
+        a img{
+            //efecto imagen traslucida para resoluciones a partir de md
+            filter: opacity(0.7) drop-shadow(0 0 0 map-get($colores,secundario20)); 
+            &:hover{
+                filter: none;
+            }
+        }
+        @media (min-width: 768px) {
+            height: 17rem;//debe tener el mismo height que la img
+            a img{
+                height: 16.9rem; //debe tener el mismo height que el anterior menos aprox 0.1 (el border tiene 1px)
+                object-fit: cover;
+            }
+            
+        }
+        
+    }
+}
+
+//Servicios
+#servicios{
+    div.card{
+        height: 60vh;
+        img{
+            height: 60vh;//debe ser el mismo height que el anterior
+            object-fit: cover;
+        }
+    }
+
+    //filtro imagen traslucida 
+    img{
+        filter: opacity(0.8) drop-shadow(0 0 0 map-get($colores,principal));
+    }
+    
+    h2,p,small{
+        color: map-get($colores,blanco);
+        text-shadow: 1px 1px 5px map-get($colores,negro);
+        font-weight: $weight700;
+    }
+
+    svg{
+        width: 3.5em;
+        height: 3.5em;
+        fill: map-get($colores,principal);
+        &:hover {
+            fill: map-get($colores,secundario) ;
+        }
+    }
+    
+
+}
+
+//Nuestros eventos
+#nuestros-eventos{
+    --bs-gutter-x: 0!important;
+    .row{
+        --bs-gutter-x: 0!important;
+    }
+
+    a{
+        img{
+        padding: 0.2rem;
+        }
+    }
+    
+    //clases para redimensionar imagenes -> aplicar a las etiquetas <a> y <img>
+    .cuadrado-grande{
+        height: 70vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .rectangulo{
+        height: 35vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .cuadrado-chico{
+        height: 35vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    //efecto imagen traslucida para resoluciones a partir de md
+    a img{
+        filter: opacity(0.7) drop-shadow(0 0 0 map-get($colores,principal));
+        &:hover{
+            filter: none;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+*{
+	font-family: $mainFont;
+	color: map-get($colores,negro);
+	box-sizing: border-box;
+	text-align: center;
+}
+
+body{
+	background-color: map-get($colores,blanco);
+}
+
+a{
+	text-decoration: none;
+	color: map-get($colores,negro);
+}
+
+img[src$="cr-logo-horizontal.svg"]{
+	width: 200px;
+}
+

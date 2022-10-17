@@ -1,0 +1,43 @@
+#home {
+    //efecto imagen traslucida para resoluciones a partir de md
+    @media (min-width: 768px) {
+        div.carousel{
+            img{
+                filter: opacity(0.8) drop-shadow(0 0 0 map-get($colores,blanco));
+            }
+        }
+    }
+
+    h2, p{
+            color: map-get($colores,blanco);
+            text-shadow: 1px 1px 5px map-get($colores,negro);
+        }
+  
+    h1{
+        color: map-get($colores,principal);
+    }
+
+    h3{
+        color: map-get($colores,principal80);
+    }
+
+    div.row{
+        article{
+            position: relative;
+            img:hover{
+                    transform: scale(1.01);                
+                }
+            
+        }
+    }
+
+}
+
+.textoEncimaCentrado {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,700;1,900&display=swap');
+
+//Font-family
+$mainFont:'Mulish', sans-serif;
+
+//Font-weight
+$weight200: 200;
+$weight300: 300;
+$weight400: 400;
+$weight500: 500;
+$weight700: 700;
+$weight900: 900;
+
+//Paleta de colores
+$colores: (
+	principal: rgb(128,92,255),
+    principal10: rgba(128,92,255,.1),
+    principal40: rgba(128,92,255,.4),
+    principal50: rgba(128,92,255,.5),
+    principal60: rgba(128,92,255,.6),
+    principal70: rgba(128,92,255,.7),
+    principal80: rgba(128,92,255,.8),
+    principal90: rgba(128,92,255,.9),
+	secundario: rgb(103,227,184),
+    secundario20: rgba(103,227,184,.2),
+    secundario40: rgba(103,227,184,.4),
+    secundario50: rgba(103,227,184,.5),
+    secundario60: rgba(103,227,184,.6),
+    secundario70: rgba(103,227,184,.7),
+    secundario80: rgba(103,227,184,.8),
+    secundario90: rgba(103,227,184,.9),
+	negro: rgb(21, 21, 21),
+    blanco: rgb(248, 248, 248),
+	transparente: rgba(0, 0, 0, 0),
+);
+//map-get($colores, nombreColor)
+
+// Mixins 
+@mixin font ($size, $weight){
+	font-size: $size;
+	font-weight: $weight;
+}
+//@include font (size, weight);

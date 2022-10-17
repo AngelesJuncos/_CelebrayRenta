@@ -1,0 +1,136 @@
+.square {
+    width: 14em;
+}
+
+//nav fija
+.nav-fija {
+    background-color: map-get($colores, principal40);
+    position: sticky;
+	top: 0;
+    z-index: 1000;
+    h3{
+        @include font (1.05em, $weight700);
+        color: map-get($colores, blanco);
+    }
+    
+}
+
+div.square svg{
+    fill: map-get($colores,principal) ;
+    &:hover {
+        fill: map-get($colores,principal40) ;
+    }
+}
+
+
+.circleCotiza {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-color: map-get($colores,principal);
+    color: map-get($colores,blanco);
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: map-get($colores,principal40);
+    }
+    @media (min-width: 768px) {
+        height: 6em;
+        width: 6em; 
+    }
+ 
+}
+
+//navbar
+nav{
+    background-color: map-get($colores, principal10);
+    
+    ul.dropdown-menu{
+        background-color: map-get($colores,transparente);
+        //lg (la nav se expande en lg)
+        @media (min-width: 992px) {
+            background-color: white;
+        }
+    }
+
+    //hover para links menú 
+    .nav-link:hover{
+        color: map-get($colores,negro);
+        font-weight: $weight700;
+    }
+    //active para links menu -> poner la clase en cada página según corresponda
+    .active-menu-por-pagina{
+        font-weight: $weight700;
+    }
+    //hover y active para links submenú
+    .dropdown-item:hover{
+        background-color: map-get($colores,principal10);
+        font-weight: $weight500;
+    }
+    .dropdown-item:active{
+        color: map-get($colores,blanco);
+        background-color: map-get($colores,secundario);
+    }
+    form{
+        input{
+            text-align: left;
+        }
+    }
+}
+
+li.nav-item a {
+    color: map-get($colores,negro);
+}
+
+.btn-outline-success{
+    border: map-get($colores,secundario) 1px solid;
+    color: map-get($colores,secundario);
+    &:hover{
+        border: map-get($colores,secundario) 1px solid!important;
+        background-color: map-get($colores,secundario)!important;
+        color: map-get($colores,blanco)!important;
+    }
+} 
+
+//Desplegar submenu al pasar el mouse sobre el LINK del menu
+.dropdown-menu{
+    display: none;
+    position: absolute;
+}
+  
+.dropdown-toggle:hover ~ .dropdown-menu {
+    display: block;
+}
+
+
+//footer
+footer{
+    background-color: map-get($colores, principal40);
+    ul{
+        text-align: center;
+    }
+    li{
+        text-align: center;
+        list-style: none;
+        a{
+            &:hover {
+                color: map-get($colores,negro);
+                font-weight: $weight700;
+            }
+        }      
+    }
+    h3{
+        @include font (1.05em, $weight700);
+    }
+
+    iframe{
+        max-width: 100vw;
+    }
+    
+}
+
+//copyright
+.copy{
+    border-top: 1px solid map-get($colores,principal);
+    background-color: map-get($colores, principal10);
+}
