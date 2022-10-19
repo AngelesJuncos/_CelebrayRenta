@@ -1,12 +1,12 @@
 #home {
     //efecto imagen traslucida para resoluciones a partir de md
-    @media (min-width: 768px) {
-        div.carousel{
-            img{
-                filter: opacity(0.8) drop-shadow(0 0 0 map-get($colores,blanco));
-            }
-        }
-    }
+    //@media (min-width: 768px) {
+        //div.carousel{
+            //img{
+                //filter: opacity(0.8) drop-shadow(0 0 0 map-get($colores,blanco));
+            //}
+        //}
+    //}
 
     h2, p{
             color: map-get($colores,blanco);
@@ -40,4 +40,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-

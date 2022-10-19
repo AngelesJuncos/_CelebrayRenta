@@ -12,8 +12,8 @@ a {
   text-decoration: none;
   color: #151515; }
 
-img[src$="cr-logo-horizontal.svg"] {
-  width: 200px; }
+img[src$="logo-transparente.svg"] {
+  width: 230px; }
 
 .square {
   width: 14em; }
@@ -107,10 +107,6 @@ footer {
   border-top: 1px solid #805cff;
   background-color: rgba(128, 92, 255, 0.1); }
 
-@media (min-width: 768px) {
-  #home div.carousel img {
-    filter: opacity(0.8) drop-shadow(0 0 0 #f8f8f8); } }
-
 #home h2, #home p {
   color: #f8f8f8;
   text-shadow: 1px 1px 5px #151515; }
@@ -140,8 +136,7 @@ footer {
   padding: 1.5rem 0; }
 
 #quienes-somos img {
-  max-width: 95%;
-  filter: opacity(0.7) drop-shadow(0 0 0 rgba(103, 227, 184, 0.2)); }
+  max-width: 95%; }
 
 @media (min-width: 768px) {
   #quienes-somos article {
@@ -191,10 +186,6 @@ footer {
   #alquiler-mobiliario div.card .list-group {
     --bs-list-group-item-padding-x: 0.5rem;
     --bs-list-group-item-padding-y: 0.25rem; }
-  #alquiler-mobiliario div.card a img {
-    filter: opacity(0.7) drop-shadow(0 0 0 rgba(103, 227, 184, 0.2)); }
-    #alquiler-mobiliario div.card a img:hover {
-      filter: none; }
   @media (min-width: 768px) {
     #alquiler-mobiliario div.card {
       height: 17rem; }
@@ -207,9 +198,6 @@ footer {
   #servicios div.card img {
     height: 60vh;
     object-fit: cover; }
-
-#servicios img {
-  filter: opacity(0.8) drop-shadow(0 0 0 #805cff); }
 
 #servicios h2, #servicios p, #servicios small {
   color: #f8f8f8;
@@ -241,7 +229,3 @@ footer {
     height: 35vh;
     width: 100%;
     object-fit: cover; }
-  #nuestros-eventos a img {
-    filter: opacity(0.7) drop-shadow(0 0 0 #805cff); }
-    #nuestros-eventos a img:hover {
-      filter: none; }
