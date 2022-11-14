@@ -21,13 +21,27 @@
         color: map-get($colores,principal80);
     }
 
-    div.row{
-        article{
-            position: relative;
-            img:hover{
-                    transform: scale(1.01);                
-                }
-            
+    #carouselExampleFade{
+        img{
+            max-height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    #gridHome{
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 75%;
+        }
+        
+        div.row{
+            article{
+                position: relative;
+                img:hover{
+                        transform: scale(1.01);                
+                    }
+                
+            }
         }
     }
 

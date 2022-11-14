@@ -117,10 +117,19 @@ footer {
 #home h3 {
   color: rgba(128, 92, 255, 0.8); }
 
-#home div.row article {
-  position: relative; }
-  #home div.row article img:hover {
-    transform: scale(1.01); }
+#home #carouselExampleFade img {
+  max-height: 100vh;
+  object-fit: cover; }
+
+#home #gridHome {
+  width: 100%; }
+  @media (min-width: 768px) {
+    #home #gridHome {
+      width: 75%; } }
+  #home #gridHome div.row article {
+    position: relative; }
+    #home #gridHome div.row article img:hover {
+      transform: scale(1.01); }
 
 .textoEncimaCentrado {
   text-align: center;
@@ -217,6 +226,10 @@ footer {
     --bs-gutter-x: 0!important; }
   #nuestros-eventos a img {
     padding: 0.2rem; }
+  #nuestros-eventos .modal {
+    --bs-modal-width: 33vw; }
+  #nuestros-eventos .modal-horizontal {
+    --bs-modal-width: 44vw!important; }
   #nuestros-eventos .cuadrado-grande {
     height: 70vh;
     width: 100%;
@@ -229,3 +242,122 @@ footer {
     height: 35vh;
     width: 100%;
     object-fit: cover; }
+
+#cotiza-tu-evento * {
+  text-align: left; }
+
+#cotiza-tu-evento .form {
+  margin: 1em;
+  background-color: rgba(128, 92, 255, 0.4);
+  border: solid 1px #805cff;
+  border-radius: 0.25rem; }
+  @media (min-width: 768px) {
+    #cotiza-tu-evento .form {
+      width: 75%; } }
+
+#cotiza-tu-evento .button {
+  color: #f8f8f8;
+  background-color: rgba(128, 92, 255, 0.4);
+  border: solid 1px #805cff;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0; }
+  #cotiza-tu-evento .button:hover {
+    background-color: #805cff; }
+
+#cotiza-tu-evento h2 {
+  text-align: center;
+  color: #f8f8f8;
+  background-color: rgba(128, 92, 255, 0.4);
+  padding: 0.5rem 0;
+  margin-bottom: 0; }
+
+#cotiza-tu-evento h4 {
+  color: #805cff;
+  border-top: 1px solid #805cff;
+  padding: 1rem;
+  margin: 0; }
+
+#cotiza-tu-evento legend {
+  padding: 0 1rem; }
+
+#cotiza-tu-evento input {
+  padding-left: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem; }
+
+#cotiza-tu-evento label {
+  font-size: 0.9rem; }
+
+#cotiza-tu-evento h5 {
+  margin-top: 0.5rem; }
+
+#cotiza-tu-evento .input-numeros {
+  width: 4rem; }
+
+#cotiza-tu-evento div.accordion {
+  width: fit-content; }
+  #cotiza-tu-evento div.accordion img {
+    width: 100px; }
+  #cotiza-tu-evento div.accordion button label {
+    padding-left: 0.2rem; }
+
+#cotiza-tu-evento .mensajeFinal {
+  padding-left: 5rem;
+  width: 100%; }
+
+#cotiza-tu-evento #collapse-fecha {
+  display: none; }
+
+#cotiza-tu-evento #fechaSi:checked ~ #collapse-fecha {
+  display: block; }
+
+#cotiza-tu-evento #collapse-carpa {
+  display: none; }
+
+#cotiza-tu-evento #carpaSi:checked ~ #collapse-carpa {
+  display: block; }
+
+#cotiza-tu-evento #collapse-mesa {
+  display: none; }
+
+#cotiza-tu-evento #mesaSi:checked ~ #collapse-mesa {
+  display: block; }
+
+#cotiza-tu-evento #collapse-silla {
+  display: none; }
+
+#cotiza-tu-evento #sillaSi:checked ~ #collapse-silla {
+  display: block; }
+
+#cotiza-tu-evento #collapse-vajilla {
+  display: none; }
+
+#cotiza-tu-evento #vajillaSi:checked ~ #collapse-vajilla {
+  display: block; }
+
+#cotiza-tu-evento #collapse-salas {
+  display: none; }
+
+#cotiza-tu-evento #salasSi:checked ~ #collapse-salas {
+  display: block; }
+
+#cotiza-tu-evento #collapse-fiestas {
+  display: none; }
+
+#cotiza-tu-evento #fiestasSi:checked ~ #collapse-fiestas {
+  display: block; }
+
+#cotiza-tu-evento #collapse-deco {
+  display: none; }
+
+#cotiza-tu-evento #decoSi:checked ~ #collapse-deco {
+  display: block; }
+
+#cotiza-tu-evento #collapse-catering {
+  display: none; }
+
+#cotiza-tu-evento #cateringSi:checked ~ #collapse-catering {
+  display: block; }

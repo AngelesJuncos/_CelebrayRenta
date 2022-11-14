@@ -143,6 +143,14 @@
         padding: 0.2rem;
         }
     }
+
+    //clases para ajustar la ventana modal a la foto
+    .modal {
+        --bs-modal-width: 33vw;
+    }
+    .modal-horizontal {
+        --bs-modal-width: 44vw!important; //proporcion 3/4
+    }
     
     //clases para redimensionar imagenes -> aplicar a las etiquetas <a> y <img>
     .cuadrado-grande{
@@ -168,4 +176,119 @@
             //filter: none;
         //}
     //}
+}
+
+//Cotiza tu evento
+#cotiza-tu-evento{
+    *{
+        text-align: left;
+    }
+
+    .form {
+        margin: 1em;
+        background-color: map-get($colores, principal40);
+        border: solid 1px map-get($colores, principal);
+        border-radius: 0.25rem;
+        @media (min-width: 768px) {
+            width: 75%;
+        }
+    }
+
+    .button {
+        color: map-get($colores, blanco);
+        background-color: map-get($colores, principal40);
+        border: solid 1px map-get($colores, principal);
+        border-radius: 0.25rem;
+        @include font (1.5rem, $weight500);
+        padding: 0.5rem 1.5rem;
+        margin: 1rem 0;
+        &:hover{
+            background-color: map-get($colores, principal);
+        }
+    }
+
+    h2{
+        text-align: center;
+        color: map-get($colores, blanco);
+        background-color: map-get($colores, principal40); 
+        padding: 0.5rem 0;
+        margin-bottom: 0;    
+    }
+
+    h4{
+        color: map-get($colores, principal);
+        border-top: 1px solid map-get($colores,principal);
+        padding: 1rem;
+        margin: 0;
+    }
+
+    legend {
+        padding: 0 1rem;
+    }
+
+    input{
+        padding-left: 0.2rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+    }
+
+    label{
+        font-size: 0.9rem;
+    }
+
+   h5{
+    margin-top: 0.5rem;
+   }
+
+   .input-numeros{
+    width: 4rem;
+   }
+
+   div.accordion {
+    width: fit-content;
+    img{
+        width: 100px;
+    }
+    &  button label{
+        padding-left: 0.2rem;
+       }
+   }
+
+   .mensajeFinal{
+    padding-left: 5rem;
+    width: 100%;
+   }
+
+    
+    form a {
+        //text-decoration: none; 
+    }
+    
+    input.button:hover {
+        //color: #ecb365; 
+    }
+    
+    fieldset.form h2 {
+        //color: #ecb365;
+        //font-weight: 400; 
+    }
+    
+    fieldset.form h3 {
+       // margin-top: 1em;
+        //text-align: left;
+        //font-size: 1.2em;
+        //font-weight: 400; 
+    }
+    
+    
+
+    @each $opcion in fecha, carpa, mesa, silla, vajilla, salas, fiestas, deco, catering {
+        #collapse-#{$opcion} {
+            display: none;
+        }
+
+        ##{$opcion}Si:checked~#collapse-#{$opcion} {
+            display: block;
+        }
+    }
 }
