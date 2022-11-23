@@ -114,7 +114,7 @@
     <main id="cotiza-tu-evento" class="container-fluid"><!--Starts Cotiza-->
         <h1 class="d-none">Cotiza tu evento</h1>
         
-		<div class="d-flex justify-content-center"><!--Ponerle a todo requeried-->
+		<div class="d-flex justify-content-center">
 			<form class="form" action="https://formsubmit.co/angelesjuncos@gmail.com" method="POST">
 				<div class="w-100">
 					<h2>¿Tienes que organizar un evento? Completa el formulario y te enviaremos un presupuesto a la brevedad</h2>
@@ -122,15 +122,15 @@
 					<fieldset>
                         <h4>Datos de contacto</h4>
                         <legend class="d-flex flex-column">
-                            <label for="nombre apellido"><h5>Nombre y Apellido:</h5></label>
-                            <input class="" type="text" id="nombre" placeholder="Nombre" required="" name="Nombre"><!--textColor-->
-                            <input class="" type="text" id="apellido" placeholder="Apellido" required="" name="Apellido"><!--textColor-->
+                            <label class="d-flex flex-row" for="nombre apellido"><h5>Nombre y Apellido:</h5><small> *</small></label>
+                            <input class="" type="text" id="nombre" placeholder="Nombre" required="required" name="Nombre">
+                            <input class="" type="text" id="apellido" placeholder="Apellido" required="required" name="Apellido">
     
-                            <label for="phone"><h5>Celular:</h5></label>
-                            <input class="" type="tel" id="phone" required="" name="Celular"><!--textColor-->
+                            <label class="d-flex flex-row" for="phone"><h5>Celular:</h5><small> *</small></label>
+                            <input class="" type="tel" id="phone" required="required" name="Celular">
                             
                             <label for="email"><h5>Correo electrónico:</h5></label>
-                            <input class="" type="email" id="email" required="" name="email"><!--textColor-->
+                            <input class="" type="email" id="email" name="email">
                         </legend>
                     </fieldset>
                     
@@ -140,32 +140,35 @@
 						<legend class="d-flex flex-column">
                             <h5>Fecha del evento:</h5>
                             <div class="d-flex flex-row align-items-center">
-                                <input type="radio" id="fechaSi" name="Tiene fecha del evento?" value="Si">
+                                <input type="radio" id="fechaSi" name="Tiene fecha del evento?" value="Si" required="required">
                                 <label class="px-2" for="fechaSi">Ya tengo fecha</label>
                                 <div id="collapse-fecha">
-                                    <!--VER SI LA FECHA QUE SELECCIONA EL CLIENTE LLEGA BIEN--><input type="date" id="fecha" required="" name="Fecha del evento:" value="" min="2022-10-01" max="2052-12-31"><!--textColor-->
+                                    <!--VER SI LA FECHA QUE SELECCIONA EL CLIENTE LLEGA BIEN--><input type="date" id="fecha"  required="required" name="Fecha del evento:" value="" min="2022-10-01" max="2052-12-31">
                                 </div>
                             </div>
                             
                             <div class="">
-                                <input type="radio" id="sinFecha" name="Tiene fecha del evento?" value="Aún no decide la fecha">
+                                <input type="radio" id="sinFecha" name="Tiene fecha del evento?" value="Aún no decide la fecha"  required="required">
                                 <label for="sinFecha">Aún no decido la fecha</label>
                             </div>        
                         </legend>
 						
-						<legend class="d-flex flex-column" >
+						<legend class="d-flex flex-column">
                             <h5>Lugar del evento:</h5>  
-						    <input class="" type="text" id="lugar" placeholder="Indicar dirección del evento" required="" name="Lugar del evento"><!--textColor-->
+						    <input class="" type="text" id="lugar" placeholder="Indicar dirección del evento si lo desea para una mejor cotización" name="Lugar del evento">
                         </legend>
 
                         <legend class="d-flex flex-column">
-                            <h5>Cantidad de personas:</h5>
+                            <div class="d-flex flex-row">
+                                <h5>Cantidad de personas:</h><sup> opcional</sup>
+                            </div>
+                            
                             <div>
-                                <input class="input-numeros" type="number" id="adultos" required="" name="Cantidad de adultos"><!--textColor-->
+                                <input class="input-numeros" type="number" id="adultos" name="Cantidad de adultos">
                                 <label for="adultos">Adultos</label>
                             </div>
                             <div>
-                                <input class="input-numeros" type="number" id="nenes" required="" name="Cantidad de niños">	<!--textColor-->
+                                <input class="input-numeros" type="number" id="nenes" name="Cantidad de niños">
                                 <label for="nenes">Niños</label>
                             </div>		
                         </legend>
@@ -178,163 +181,11 @@
                             <div>
                                 <h5>¿Necesitas carpas?</h5>
                                 <div>
-                                    <input type="radio" id="carpaSi" name="Necesita carpa?" value="carpa">
+                                    <input type="radio" id="carpaSi" name="Necesita carpa?" value="carpa"  required="required">
                                     <label for="carpaSi">Si</label>
                                 
-                                    <input type="radio" id="carpaNo" name="Necesita carpa?" value="carpa">
+                                    <input type="radio" id="carpaNo" name="Necesita carpa?" value="carpa"  required="required">
                                     <label for="carpaNo">No</label>
-                                
-                                    <div id="collapse-carpa">
-                                        <div class="accordion" id="accordionCarpa">
-
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading12x9">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12x9" aria-expanded="false" aria-controls="collapse12x9">
-                                                        <input id="12x9" type="radio" name="Tipo de carpa" value="12x9">
-                                                        <label for="12x9">12x9</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse12x9" class="accordion-collapse collapse" aria-labelledby="heading12x9" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!---Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading12x8">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12x8" aria-expanded="false" aria-controls="collapse12x8">
-                                                        <input id="12x8" type="radio" name="Tipo de carpa" value="12x8">
-                                                        <label for="12x8">12x8</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse12x8" class="accordion-collapse collapse" aria-labelledby="heading12x8" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading8x6">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8x6" aria-expanded="false" aria-controls="collapse8x6">
-                                                        <input id="8x6" type="radio" name="Tipo de carpa" value="8x6">
-                                                        <label for="8x6">8x6</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse8x6" class="accordion-collapse collapse" aria-labelledby="heading8x6" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading6x6">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6x6" aria-expanded="false" aria-controls="collapse6x6">
-                                                        <input id="6x6" type="radio" name="Tipo de carpa" value="6x6">
-                                                        <label for="6x6">6x6</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse6x6" class="accordion-collapse collapse" aria-labelledby="heading6x6" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading6x4">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6x4" aria-expanded="false" aria-controls="collapse6x4">
-                                                        <input id="6x4" type="radio" name="Tipo de carpa" value="6x4">
-                                                        <label for="6x4">6x4</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse6x4" class="accordion-collapse collapse" aria-labelledby="heading6x4" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading6x3">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6x3" aria-expanded="false" aria-controls="collapse6x3">
-                                                        <input id="6x3" type="radio" name="Tipo de carpa" value="6x3">
-                                                        <label for="6x3">6x3</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse6x3" class="accordion-collapse collapse" aria-labelledby="heading6x3" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading5x4">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5x4" aria-expanded="false" aria-controls="collapse5x4">
-                                                        <input id="5x4" type="radio" name="Tipo de carpa" value="5x4">
-                                                        <label for="5x4">5x4</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse5x4" class="accordion-collapse collapse" aria-labelledby="heading5x4" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading4x3">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4x3" aria-expanded="false" aria-controls="collapse4x3">
-                                                        <input id="4x3" type="radio" name="Tipo de carpa" value="4x3">
-                                                        <label for="4x3">4x3</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse4x3" class="accordion-collapse collapse" aria-labelledby="heading4x3" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="heading3x3">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3x3" aria-expanded="false" aria-controls="collapse3x3">
-                                                        <input id="3x3" type="radio" name="Tipo de carpa" value="3x3">
-                                                        <label for="3x3">3x3</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapse3x3" class="accordion-collapse collapse" aria-labelledby="heading3x3" data-bs-parent="#accordionCarpa">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/index/grid/carpas.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                            
-                                        </div>
-
-                                    </div>
                                 
                                 </div>
 
@@ -343,10 +194,10 @@
                             <div>
                                 <h5>¿Necesitas mesas?</h5>
                                 <div>
-                                    <input type="radio" id="mesaSi" name="Necesita mesa?" value="mesa">
+                                    <input type="radio" id="mesaSi" name="Necesita mesa?" value="mesa"  required="required">
                                     <label for="mesaSi">Si</label>
 
-                                    <input type="radio" id="mesaNo" name="Necesita mesa?" value="mesa">
+                                    <input type="radio" id="mesaNo" name="Necesita mesa?" value="mesa"  required="required">
                                     <label for="mesaNo">No</label>
 
                                     <div id="collapse-mesa">
@@ -356,7 +207,7 @@
                                                 <p class="accordion-header" id="headingCampestre">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampestre" aria-expanded="false" aria-controls="collapseCampestre">
-                                                        <input id="campestre" type="radio" name="Tipo de mesa" value="campestre">
+                                                        <input id="campestre" type="checkbox" name="Tipo de mesa" value="campestre">
                                                         <label for="campestre">Campestre</label>
                                                     </button>
                                                     
@@ -369,17 +220,33 @@
                                             </div>
     
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingVintage">
+                                                <p class="accordion-header" id="headingVintageCafe">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVintage" aria-expanded="false" aria-controls="collapseVintage">
-                                                        <input id="vintage" type="radio" name="Tipo de mesa" value="vintage">
-                                                        <label for="vintage">Vintage</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVintageCafe" aria-expanded="false" aria-controls="collapseVintageCafe">
+                                                        <input id="vintageCafe" type="checkbox" name="Tipo de mesa" value="vintageCafe">
+                                                        <label for="vintageCafe">Vintage color café</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapseVintage" class="accordion-collapse collapse" aria-labelledby="headingVintage" data-bs-parent="#accordionMesa">
+                                                <div id="collapseVintageCafe" class="accordion-collapse collapse" aria-labelledby="headingVintageCafe" data-bs-parent="#accordionMesa">
                                                     <div class="accordion-body">
                                                         <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/mesa-frailera-vintage-cafe.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingVintageBlanco">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVintageBlanco" aria-expanded="false" aria-controls="collapseVintageBlanco">
+                                                        <input id="vintageBlanco" type="checkbox" name="Tipo de mesa" value="vintageBlanco">
+                                                        <label for="vintageBlanco">Vintage color blanco</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseVintageBlanco" class="accordion-collapse collapse" aria-labelledby="headingVintageBlanco" data-bs-parent="#accordionMesa">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/mesa-frailera-vintage-blanca.webp" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,7 +255,7 @@
                                                 <p class="accordion-header" id="headingVidrio">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVidrio" aria-expanded="false" aria-controls="collapseVidrio">
-                                                        <input id="vidrio" type="radio" name="Tipo de mesa" value="vidrio">
+                                                        <input id="vidrio" type="checkbox" name="Tipo de mesa" value="vidrio">
                                                         <label for="vidrio">Vidrio</label>
                                                     </button>
                                                     
@@ -404,7 +271,7 @@
                                                 <p class="accordion-header" id="headingRectangular">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRectangular" aria-expanded="false" aria-controls="collapseRectangular">
-                                                        <input id="rectangular" type="radio" name="Tipo de mesa" value="rectangular">
+                                                        <input id="rectangular" type="checkbox" name="Tipo de mesa" value="rectangular">
                                                         <label for="rectangular">Rectangular con mantel</label>
                                                     </button>
                                                     
@@ -420,7 +287,7 @@
                                                 <p class="accordion-header" id="headingRedonda">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRedonda" aria-expanded="false" aria-controls="collapseRedonda">
-                                                        <input id="redonda" type="radio" name="Tipo de mesa" value="redonda">
+                                                        <input id="redonda" type="checkbox" name="Tipo de mesa" value="redonda">
                                                         <label for="redonda">Redonda con mantel</label>
                                                     </button>
                                                     
@@ -431,19 +298,67 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingMesaNenes">
+                                                <p class="accordion-header" id="headingRedondaMadera">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaNenes" aria-expanded="false" aria-controls="collapseMesaNenes">
-                                                        <input id="mesaNenes" type="radio" name="Tipo de mesa" value="mesaNenes">
-                                                        <label for="mesaNenes">Para niños</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRedondaMadera" aria-expanded="false" aria-controls="collapseRedondaMadera">
+                                                        <input id="redondaMadera" type="checkbox" name="Tipo de mesa" value="redondaMadera">
+                                                        <label for="redondaMadera">Redonda de madera</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapseMesaNenes" class="accordion-collapse collapse" aria-labelledby="headingMesaNenes" data-bs-parent="#accordionMesa">
+                                                <div id="collapseRedondaMadera" class="accordion-collapse collapse" aria-labelledby="headingRedondaMadera" data-bs-parent="#accordionMesa">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaNenesClasico">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaNenesClasico" aria-expanded="false" aria-controls="collapseMesaNenesClasico">
+                                                        <input id="mesaNenesClasico" type="checkbox" name="Tipo de mesa" value="mesaNenesClasico">
+                                                        <label for="mesaNenesClasico">Para niños estilo clásico</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaNenesClasico" class="accordion-collapse collapse" aria-labelledby="headingMesaNenesClasico" data-bs-parent="#accordionMesa">
                                                     <div class="accordion-body">
                                                         <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/mesa-nenes-clasica.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaNenesPallet">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaNenesPallet" aria-expanded="false" aria-controls="collapseMesaNenesPallet">
+                                                        <input id="mesaNenesPallet" type="checkbox" name="Tipo de mesa" value="mesaNenesPallet">
+                                                        <label for="mesaNenesPallet">Para niños tipo pallet</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaNenesPallet" class="accordion-collapse collapse" aria-labelledby="headingMesaNenesPallet" data-bs-parent="#accordionMesa">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/mesa-nenes-pallets.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaNenesPicnic">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaNenesPicnic" aria-expanded="false" aria-controls="collapseMesaNenesPicnic">
+                                                        <input id="mesaNenesPicnic" type="checkbox" name="Tipo de mesa" value="mesaNenesPicnic">
+                                                        <label for="mesaNenesPicnic">Para niños tipo picnic</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaNenesPicnic" class="accordion-collapse collapse" aria-labelledby="headingMesaNenesPicnic" data-bs-parent="#accordionMesa">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mesas/mesa-nenes-picnic.webp" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -460,36 +375,20 @@
                             <div>
                                 <h5>¿Necesitas sillas?</h5>
                                 <div>
-                                    <input type="radio" id="sillaSi" name="Necesita silla?" value="silla">
+                                    <input type="radio" id="sillaSi" name="Necesita silla?" value="silla"  required="required">
                                     <label for="sillaSi">Si</label>
 
-                                    <input type="radio" id="sillaNo" name="Necesita silla?" value="silla">
+                                    <input type="radio" id="sillaNo" name="Necesita silla?" value="silla"  required="required">
                                     <label for="sillaNo">No</label>
 
                                     <div id="collapse-silla">
                                         <div class="accordion" id="accordionSilla">
-    
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="headingTiffany">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiffany" aria-expanded="false" aria-controls="collapseTiffany">
-                                                        <input id="tiffany" type="radio" name="Tipo de silla" value="tiffany">
-                                                        <label for="tiffany">Tiffany</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapseTiffany" class="accordion-collapse collapse" aria-labelledby="headingTiffany" data-bs-parent="#accordionSilla">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/sillas/silla-tiffany-blanca.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-    
+
                                             <div class="accordion-item">
                                                 <p class="accordion-header" id="headingSillaCampestre">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSillaCampestre" aria-expanded="false" aria-controls="collapseSillaCampestre">
-                                                        <input id="sillaCampestre" type="radio" name="Tipo de silla" value="sillaCampestre">
+                                                        <input id="sillaCampestre" type="checkbox" name="Tipo de silla" value="sillaCampestre">
                                                         <label for="sillaCampestre">Campestre</label>
                                                     </button>
                                                     
@@ -502,10 +401,42 @@
                                             </div>
     
                                             <div class="accordion-item">
+                                                <p class="accordion-header" id="headingTiffanyBlanca">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiffanyBlanca" aria-expanded="false" aria-controls="collapseTiffanyBlanca">
+                                                        <input id="tiffanyBlanca" type="checkbox" name="Tipo de silla" value="tiffanyBlanca">
+                                                        <label for="tiffanyBlanca">Tiffany blanca</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseTiffanyBlanca" class="accordion-collapse collapse" aria-labelledby="headingTiffanyBlanca" data-bs-parent="#accordionSilla">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/sillas/silla-tiffany-blanca.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingTiffanyDorada">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiffanyDorada" aria-expanded="false" aria-controls="collapseTiffanyDorada">
+                                                        <input id="tiffanyDorada" type="checkbox" name="Tipo de silla" value="tiffanyDorada">
+                                                        <label for="tiffanyDorada">Tiffany dorada</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseTiffanyDorada" class="accordion-collapse collapse" aria-labelledby="headingTiffanyDorada" data-bs-parent="#accordionSilla">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/sillas/silla-tiffany-dorada.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="accordion-item">
                                                 <p class="accordion-header" id="headingCrossback">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCrossback" aria-expanded="false" aria-controls="collapseCrossback">
-                                                        <input id="crossback" type="radio" name="Tipo de silla" value="crossback">
+                                                        <input id="crossback" type="checkbox" name="Tipo de silla" value="crossback">
                                                         <label for="crossback">Crossback</label>
                                                     </button>
                                                     
@@ -521,7 +452,7 @@
                                                 <p class="accordion-header" id="headingAcrilica">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAcrilica" aria-expanded="false" aria-controls="collapseAcrilica">
-                                                        <input id="acrilica" type="radio" name="Tipo de silla" value="acrilica">
+                                                        <input id="acrilica" type="checkbox" name="Tipo de silla" value="acrilica">
                                                         <label for="acrilica">Acrílica</label>
                                                     </button>
                                                     
@@ -545,15 +476,15 @@
                             <div>
                                 <h5>¿Necesitas vajilla?</h5>
                                 <div>
-                                    <input type="radio" id="vajillaSi" name="Necesita vajilla?" value="vajilla">
+                                    <input type="radio" id="vajillaSi" name="Necesita vajilla?" value="vajilla"  required="required">
                                     <label for="vajillaSi">Si</label>
 
-                                    <input type="radio" id="vajillaNo" name="Necesita vajilla?" value="vajilla">
+                                    <input type="radio" id="vajillaNo" name="Necesita vajilla?" value="vajilla"  required="required">
                                     <label for="vajillaNo">No</label></button>
 
                                     <div id="collapse-vajilla">
                                         <label for="mensajeVajilla"><h6>¿Quieres dejarnos alguna aclaración con respecto a la vajilla que te gustaría?</h6>
-                                            <textarea class="w-100" name="mensajeVajilla" id="mensajeVajilla" cols="50" rows="10"></textarea><!--textColor-->
+                                            <textarea class="w-100" name="mensajeVajilla" id="mensajeVajilla" cols="50" rows="3"></textarea>
                                         </label>
                                     </div>
 
@@ -564,10 +495,10 @@
                             <div>
                                 <h5>¿Necesitas salas lounge?</h5>
                                 <div>
-                                    <input type="radio" id="salasSi" name="Necesita salas lounge?" value="salas">
+                                    <input type="radio" id="salasSi" name="Necesita salas lounge?" value="salas" required="required">
                                     <label for="salasSi">Si</label>
 
-                                    <input type="radio" id="salasNo" name="Necesita salas lounge?" value="salas">
+                                    <input type="radio" id="salasNo" name="Necesita salas lounge?" value="salas" required="required">
                                     <label for="salasNo">No</label>
 
                                     <div id="collapse-salas">
@@ -577,7 +508,7 @@
                                                 <p class="accordion-header" id="headingClasica">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClasica" aria-expanded="false" aria-controls="collapseClasica">
-                                                        <input id="clasica" type="radio" name="Tipo de sala" value="clasica">
+                                                        <input id="clasica" type="checkbox" name="Tipo de sala lounge" value="clasica">
                                                         <label for="clasica">Clásica</label>
                                                     </button>
                                                     
@@ -593,7 +524,7 @@
                                                 <p class="accordion-header" id="headingSalasVintage">
                                                     
                                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSalasVintage" aria-expanded="false" aria-controls="collapseSalasVintage">
-                                                        <input id="salasVintage" type="radio" name="Tipo de sala lounge" value="salasVintage">
+                                                        <input id="salasVintage" type="checkbox" name="Tipo de sala lounge" value="salasVintage">
                                                         <label for="salasVintage">Vintage</label>
                                                     </button>
                                                     
@@ -601,6 +532,22 @@
                                                 <div id="collapseSalasVintage" class="accordion-collapse collapse" aria-labelledby="headingSalasVintage" data-bs-parent="#accordionSalas">
                                                     <div class="accordion-body">
                                                         <img class="img-fluid rounded" src="../images/alquiler-mobiliario/salas-lounge/salas-lounge-vintage.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingSalasPremium">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSalasPremium" aria-expanded="false" aria-controls="collapseSalasPremium">
+                                                        <input id="salasPremium" type="checkbox" name="Tipo de sala lounge" value="salasPremium">
+                                                        <label for="salasPremium">Premium</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseSalasPremium" class="accordion-collapse collapse" aria-labelledby="headingSalasPremium" data-bs-parent="#accordionSalas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/salas-lounge/" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -616,91 +563,203 @@
                             <div>
                                 <h5>¿Necesitas mobiliario para fiestas?</h5>
                                 <div>
-                                    <input type="radio" id="fiestasSi" name="Necesita mobiliario para fiestas?" value="fiestas">
+                                    <input type="radio" id="fiestasSi" name="Necesita mobiliario para fiestas?" value="fiestas" required="required">
                                     <label for="fiestasSi">Si</label>
 
-                                    <input type="radio" id="fiestasNo" name="Necesita mobiliario para fiestas?" value="fiestas">
+                                    <input type="radio" id="fiestasNo" name="Necesita mobiliario para fiestas?" value="fiestas" required="required">
                                     <label for="fiestasNo">No</label>
 
                                     <div id="collapse-fiestas">
                                         <div class="accordion" id="accordionFiestas">
     
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingBarra">
+                                                <p class="accordion-header" id="headingBarraMadera">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarra" aria-expanded="false" aria-controls="collapseBarra">
-                                                        <input id="barra" type="radio" name="Tipo de mobiliario para fiestas" value="barra">
-                                                        <label for="barra">Barra</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarraMadera" aria-expanded="false" aria-controls="collapseBarraMadera">
+                                                        <input id="barraMadera" type="checkbox" name="Tipo de mobiliario para fiestas" value="barraMadera">
+                                                        <label for="barraMadera">Barra modular de madera</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapseBarra" class="accordion-collapse collapse" aria-labelledby="headingBarra" data-bs-parent="#accordionFiestas">
+                                                <div id="collapseBarraMadera" class="accordion-collapse collapse" aria-labelledby="headingBarraMadera" data-bs-parent="#accordionFiestas">
                                                     <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/barra.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingBarraBlanca">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarraBlanca" aria-expanded="false" aria-controls="collapseBarraBlanca">
+                                                        <input id="barraBlanca" type="checkbox" name="Tipo de mobiliario para fiestas" value="barraBlanca">
+                                                        <label for="barraBlanca">Barra modular blanca</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseBarraBlanca" class="accordion-collapse collapse" aria-labelledby="headingBarraBlanca" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaCocteleraBarra">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaCocteleraBarra" aria-expanded="false" aria-controls="collapseMesaCocteleraBarra">
+                                                        <input id="mesaCocteleraBarra" type="checkbox" name="Tipo de mobiliario para fiestas" value="mesaCocteleraBarra">
+                                                        <label for="MesaCocteleraBarra">Mesa coctelera tipo barra</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaCocteleraBarra" class="accordion-collapse collapse" aria-labelledby="headingMesaCocteleraBarra" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/mesa-coctelera-barra.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaCocteleraBlanca">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaCocteleraBlanca" aria-expanded="false" aria-controls="collapseMesaCocteleraBlanca">
+                                                        <input id="mesaCocteleraBlanca" type="checkbox" name="Tipo de mobiliario para fiestas" value="mesaCocteleraBlanca">
+                                                        <label for="MesaCocteleraBlanca">Mesa coctelera de madera blanca</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaCocteleraBlanca" class="accordion-collapse collapse" aria-labelledby="headingMesaCocteleraBlanca" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaCocteleraDorada">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaCocteleraDorada" aria-expanded="false" aria-controls="collapseMesaCocteleraDorada">
+                                                        <input id="mesaCocteleraDorada" type="checkbox" name="Tipo de mobiliario para fiestas" value="mesaCocteleraDorada">
+                                                        <label for="MesaCocteleraDorada">Mesa coctelera de madera blanca con patas doradas</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaCocteleraDorada" class="accordion-collapse collapse" aria-labelledby="headingMesaCocteleraDorada" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingMesaCocteleraVidrio">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaCocteleraVidrio" aria-expanded="false" aria-controls="collapseMesaCocteleraVidrio">
+                                                        <input id="mesaCocteleraVidrio" type="checkbox" name="Tipo de mobiliario para fiestas" value="mesaCocteleraVidrio">
+                                                        <label for="MesaCocteleraVidrio">Mesa coctelera de vidrio con patas doradas</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseMesaCocteleraVidrio" class="accordion-collapse collapse" aria-labelledby="headingMesaCocteleraVidrio" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
     
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingMesaCoctelera">
+                                                <p class="accordion-header" id="headingSillaCocteleraMetal">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMesaCoctelera" aria-expanded="false" aria-controls="collapseMesaCoctelera">
-                                                        <input id="mesaCoctelera" type="radio" name="Tipo de mobiliario para fiestas" value="mesaCoctelera">
-                                                        <label for="MesaCoctelera">Mesa Coctelera</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSillaCocteleraMetal" aria-expanded="false" aria-controls="collapseSillaCocteleraMetal">
+                                                        <input id="sillaCocteleraMetal" type="checkbox" name="Tipo de mobiliario para fiestas" value="sillaCocteleraMetal">
+                                                        <label for="sillaCocteleraMetal">Silla coctelera de metal</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapseMesaCoctelera" class="accordion-collapse collapse" aria-labelledby="headingMesaCoctelera" data-bs-parent="#accordionFiestas">
-                                                    <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/mesa-coctelera.webp" alt=""><!--Actualizar foto y texto alt y style-->
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                            <div class="accordion-item">
-                                                <p class="accordion-header" id="headingSillaCoctelera">
-                                                    
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSillaCoctelera" aria-expanded="false" aria-controls="collapseSillaCoctelera">
-                                                        <input id="sillaCoctelera" type="radio" name="Tipo de mobiliario para fiestas" value="sillaCoctelera">
-                                                        <label for="sillaCoctelera">Silla Coctelera</label>
-                                                    </button>
-                                                    
-                                                </p>
-                                                <div id="collapseSillaCoctelera" class="accordion-collapse collapse" aria-labelledby="headingSillaCoctelera" data-bs-parent="#accordionFiestas">
+                                                <div id="collapseSillaCocteleraMetal" class="accordion-collapse collapse" aria-labelledby="headingSillaCocteleraMetal" data-bs-parent="#accordionFiestas">
                                                     <div class="accordion-body">
                                                         <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/silla-coctelera-cuadrada.webp" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingCalentadores">
+                                                <p class="accordion-header" id="headingSillaCocteleraRedonda">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCalentadores" aria-expanded="false" aria-controls="collapseCalentadores">
-                                                        <input id="calentadores" type="radio" name="Tipo de mobiliario para fiestas" value="calentadores">
-                                                        <label for="calentadores">Calentadores</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSillaCocteleraRedonda" aria-expanded="false" aria-controls="collapseSillaCocteleraRedonda">
+                                                        <input id="sillaCocteleraRedonda" type="checkbox" name="Tipo de mobiliario para fiestas" value="sillaCocteleraRedonda">
+                                                        <label for="sillaCocteleraRedonda">Silla coctelera redonda</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapseCalentadores" class="accordion-collapse collapse" aria-labelledby="headingCalentadores" data-bs-parent="#accordionFiestas">
+                                                <div id="collapseSillaCocteleraRedonda" class="accordion-collapse collapse" aria-labelledby="headingSillaCocteleraRedonda" data-bs-parent="#accordionFiestas">
                                                     <div class="accordion-body">
-                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/calentador-piramide.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/silla-coctelera-redonda.webp" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
     
                                             <div class="accordion-item">
-                                                <p class="accordion-header" id="headingPistas">
+                                                <p class="accordion-header" id="headingCalentadoresPiramide">
                                                     
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePistas" aria-expanded="false" aria-controls="collapsePistas">
-                                                        <input id="pistas" type="radio" name="Tipo de mobiliario para fiestas" value="pistas">
-                                                        <label for="pistas">Pistas de baile</label>
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCalentadoresPiramide" aria-expanded="false" aria-controls="collapseCalentadoresPiramide">
+                                                        <input id="calentadoresPiramide" type="checkbox" name="Tipo de mobiliario para fiestas" value="calentadoresPiramide">
+                                                        <label for="calentadoresPiramide">Calentadores tipo pirámide</label>
                                                     </button>
                                                     
                                                 </p>
-                                                <div id="collapsePistas" class="accordion-collapse collapse" aria-labelledby="headingPistas" data-bs-parent="#accordionFiestas">
+                                                <div id="collapseCalentadoresPiramide" class="accordion-collapse collapse" aria-labelledby="headingCalentadoresPiramide" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/calentador-piramide.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingCalentadoresHongo">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCalentadoresHongo" aria-expanded="false" aria-controls="collapseCalentadoresHongo">
+                                                        <input id="calentadoresHongo" type="checkbox" name="Tipo de mobiliario para fiestas" value="calentadoresHongo">
+                                                        <label for="calentadoresHongo">Calentadores tipo hongo</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapseCalentadoresHongo" class="accordion-collapse collapse" aria-labelledby="headingCalentadoresHongo" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/calentador-hongo.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingPistasFlotante">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePistasFlotante" aria-expanded="false" aria-controls="collapsePistasFlotante">
+                                                        <input id="pistasFlotante" type="checkbox" name="Tipo de mobiliario para fiestas" value="pistasFlotante">
+                                                        <label for="pistasFlotante">Pistas de baile con piso flotante</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapsePistasFlotante" class="accordion-collapse collapse" aria-labelledby="headingPistasFlotante" data-bs-parent="#accordionFiestas">
                                                     <div class="accordion-body">
                                                         <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/pista-baile-piso-flotante.webp" alt=""><!--Actualizar foto y texto alt y style-->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="headingPistasTablon">
+                                                    
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePistasTablon" aria-expanded="false" aria-controls="collapsePistasTablon">
+                                                        <input id="pistasTablon" type="checkbox" name="Tipo de mobiliario para fiestas" value="pistasTablon">
+                                                        <label for="pistasTablon">Pistas de baile con tablón</label>
+                                                    </button>
+                                                    
+                                                </p>
+                                                <div id="collapsePistasTablon" class="accordion-collapse collapse" aria-labelledby="headingPistasTablon" data-bs-parent="#accordionFiestas">
+                                                    <div class="accordion-body">
+                                                        <img class="img-fluid rounded" src="../images/alquiler-mobiliario/mobiliario-para-fiestas/pista-baile-tablon.webp" alt=""><!--Actualizar foto y texto alt y style-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -715,15 +774,15 @@
                             <div>
                                 <h5>¿Necesitas decoración?</h5>
                                 <div>
-                                    <input type="radio" id="decoSi" name="Necesita decoración?" value="deco">
+                                    <input type="radio" id="decoSi" name="Necesita decoración?" value="deco" required="required">
                                     <label for="decoSi">Si</label>
 
-                                    <input type="radio" id="decoNo" name="Necesita decoración?" value="deco">
+                                    <input type="radio" id="decoNo" name="Necesita decoración?" value="deco" required="required">
                                     <label for="decoNo">No</label>
 
                                     <div id="collapse-deco">
                                         <label for="mensajeDeco"><h6>¿Quieres dejarnos alguna aclaración con respecto a la decoración que te gustaría?</h6>
-                                            <textarea class="w-100" name="mensajeDeco" id="mensajeDeco" cols="50" rows="10"></textarea><!--textColor-->
+                                            <textarea class="w-100" name="mensajeDeco" id="mensajeDeco" cols="50" rows="3"></textarea>
                                         </label>
                                     </div>
 
@@ -734,15 +793,15 @@
                             <div>
                                 <h5>¿Necesitas catering?</h5>
                                 <div>
-                                    <input type="radio" id="cateringSi" name="Necesita catering?" value="catering">
+                                    <input type="radio" id="cateringSi" name="Necesita catering?" value="catering" required="required">
                                     <label for="cateringSi">Si</label>
 
-                                    <input type="radio" id="cateringNo" name="Necesita catering?" value="catering">
+                                    <input type="radio" id="cateringNo" name="Necesita catering?" value="catering" required="required">
                                     <label for="cateringNo">No</label>
 
                                     <div id="collapse-catering">
                                         <label for="mensajeCatering"><h6>¿Quieres dejarnos alguna aclaración con respecto a la decoración que te gustaría?</h6>
-                                            <textarea class="w-100" name="mensajeCatering" id="mensajeCatering" cols="50" rows="10"></textarea><!--textColor-->
+                                            <textarea class="w-100" name="mensajeCatering" id="mensajeCatering" cols="50" rows="3"></textarea>
                                         </label>                                    
                                     </div>
 
@@ -759,18 +818,18 @@
 
                     <fieldset>
                         <h4>¿Quieres dejarnos alguna consulta adicional o comentario?</h4>
-                        <div class="mensajeFinal">
+                        <div class="px-3">
                             <label for="mensaje">
-                                <textarea class="w-100" name="Mensaje" id="mensaje" cols="50" rows="10"></textarea><!--textColor-->
+                                <textarea class="w-100" name="Mensaje" id="mensaje" cols="200" rows="10"></textarea>
                             </label>
                         </div>
                     </fieldset>
 						
-					<div class="d-flex justify-content-center"><!---->
-						<input class="button" type="submit" value="Enviar" name="Send"><!--button-->
+					<div class="d-flex justify-content-center">
+						<input class="button" type="submit" value="Enviar" name="Send">
 					</div>
 
-					<input type="hidden" name="_next" value="https://mdvconstructora.com/pages/contacto-mensaje.html">
+					<input type="hidden" name="_next" value="../pages/cotiza-tu-evento-mensaje.html"><!--https://celebrayrenta.com/pages/cotiza-tu-evento-mensaje.html-->
 					<input type="hidden" name="_captcha" value="false">
 			
 				</div>

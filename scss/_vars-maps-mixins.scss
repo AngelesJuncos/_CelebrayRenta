@@ -33,7 +33,7 @@ $colores: (
     blanco: rgb(248, 248, 248),
 	transparente: rgba(0, 0, 0, 0),
 );
-//map-get($colores, nombreColor)
+//map-get($colores, nombreColor);
 
 // Mixins 
 @mixin font ($size, $weight){

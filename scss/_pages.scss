@@ -199,7 +199,7 @@
         background-color: map-get($colores, principal40);
         border: solid 1px map-get($colores, principal);
         border-radius: 0.25rem;
-        @include font (1.5rem, $weight500);
+        @include font (1.2rem, $weight500);
         padding: 0.5rem 1.5rem;
         margin: 1rem 0;
         &:hover{
@@ -236,16 +236,16 @@
         font-size: 0.9rem;
     }
 
-   h5{
-    margin-top: 0.5rem;
-   }
+    h5{
+        margin-top: 0.5rem;
+    }
 
-   .input-numeros{
-    width: 4rem;
-   }
+    .input-numeros{
+        width: 4rem;
+    }
 
-   div.accordion {
-    width: fit-content;
+    div.accordion {
+        width: fit-content;
     img{
         width: 100px;
     }
@@ -254,33 +254,13 @@
        }
    }
 
-   .mensajeFinal{
-    padding-left: 5rem;
-    width: 100%;
-   }
+    small{
+        color: red;
+    }
 
-    
-    form a {
-        //text-decoration: none; 
+    sup{
+        color: green;
     }
-    
-    input.button:hover {
-        //color: #ecb365; 
-    }
-    
-    fieldset.form h2 {
-        //color: #ecb365;
-        //font-weight: 400; 
-    }
-    
-    fieldset.form h3 {
-       // margin-top: 1em;
-        //text-align: left;
-        //font-size: 1.2em;
-        //font-weight: 400; 
-    }
-    
-    
 
     @each $opcion in fecha, carpa, mesa, silla, vajilla, salas, fiestas, deco, catering {
         #collapse-#{$opcion} {
@@ -290,5 +270,15 @@
         ##{$opcion}Si:checked~#collapse-#{$opcion} {
             display: block;
         }
+    }
+}
+
+//Cotiza tu evento - Mensaje
+#cotiza-tu-evento-mensaje{
+    padding: 3rem 1rem;
+    p{
+        text-align: center;
+        @include font (1.5rem, $weight500);
+        color: map-get($colores, principal);
     }
 }
