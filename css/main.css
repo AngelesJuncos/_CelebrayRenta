@@ -19,7 +19,7 @@ img[src$="logo-transparente.svg"] {
   width: 14em; }
 
 .nav-fija {
-  background-color: rgba(128, 92, 255, 0.4);
+  background-color: #c8bafb;
   position: sticky;
   top: 0;
   z-index: 1000; }
@@ -98,8 +98,10 @@ footer {
       color: #151515;
       font-weight: 700; }
   footer h3 {
-    font-size: 1.05em;
-    font-weight: 700; }
+    font-size: 1.05em; }
+    footer h3 a:hover {
+      color: #151515;
+      font-weight: 700; }
   footer iframe {
     max-width: 100vw; }
 
@@ -247,7 +249,7 @@ footer {
   text-align: left; }
 
 #cotiza-tu-evento .form {
-  margin: 1em;
+  margin: 1em 0;
   background-color: rgba(128, 92, 255, 0.4);
   border: solid 1px #805cff;
   border-radius: 0.25rem; }

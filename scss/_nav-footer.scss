@@ -4,7 +4,7 @@
 
 //nav fija
 .nav-fija {
-    background-color: map-get($colores, principal40);
+    background-color: map-get($colores, principal40opaco);
     position: sticky;
 	top: 0;
     z-index: 1000;
@@ -120,7 +120,13 @@ footer{
         }      
     }
     h3{
-        @include font (1.05em, $weight700);
+        font-size: 1.05em;
+        a{
+            &:hover {
+            color: map-get($colores,negro);
+            font-weight: $weight700;
+            }
+        }
     }
 
     iframe{
